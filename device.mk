@@ -42,12 +42,13 @@ PRODUCT_EXTRA_RECOVERY_KEYS += \
     $(DEVICE_PATH)/security/magisk \
     $(DEVICE_PATH)/security/miui_releasekey
 
-# PRODUCT_RELEASE_NAME ro.twrp.device.name
-PRODUCT_PROPERTY_OVERRIDES += ro.twrp.device.name=$(PRODUCT_RELEASE_NAME)
+# Overrides
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRODUCT_NAME=$(PRODUCT_RELEASE_NAME) \
+    TARGET_DEVICE=$(PRODUCT_RELEASE_NAME)
 
-ifneq ($(TW_SKKK_VER_CODE),)
-PRODUCT_PROPERTY_OVERRIDES += ro.twrp.version.skkk.code=$(TW_SKKK_VER_CODE)
-endif
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.product.device=$(PRODUCT_RELEASE_NAME)
 
 TWRP_REQUIRED_MODULES += miui_prebuilt \
     magisk_prebuilt
