@@ -144,9 +144,6 @@ TW_INCLUDE_LPTOOLS := true
 			     
 # TWRP specific build flags
 TW_THEME := portrait_hdpi
-ifeq ($(TW_DEVICE_VERSION),)
-TW_DEVICE_VERSION=12.0
-endif
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
@@ -157,15 +154,11 @@ TW_NO_EXFAT_FUSE := true
 TW_USE_TOOLBOX := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
+TW_CUSTOM_CPU_TEMP_PATH := "/sys/devices/virtual/thermal/thermal_zone19/temp"
 TW_MAX_BRIGHTNESS := 2047
-ifeq ($(TW_DEFAULT_LANGUAGE),)
-TW_DEFAULT_LANGUAGE := RU
-endif
 TW_DEFAULT_BRIGHTNESS := 300
+TW_DEFAULT_LANGUAGE := RU
 TW_STATUS_ICONS_ALIGN := center
-ifneq ($(PRODUCT_RELEASE_NAME),lmi)
-TW_CUSTOM_CPU_POS := 172
-endif
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 TW_NO_SCREEN_BLANK := true
@@ -173,4 +166,7 @@ TW_HAS_EDL_MODE := false
 TW_SUPPORT_INPUT_AIDL_HAPTICS :=true
 TW_BACKUP_EXCLUSIONS := /data/fonts
 TW_FRAMERATE := 90
+TW_Y_OFFSET := 90
+TW_H_OFFSET := -90
+TW_DEVICE_VERSION := Alex Troj A12_v1
 ALLOW_MISSING_DEPENDENCIES := true
