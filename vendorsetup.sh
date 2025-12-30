@@ -23,10 +23,10 @@ if [ -f $FOX_MANIFEST_ROOT/bootable/recovery/orangefox_defaults.go -a -f $FOX_MA
 	#export PLATFORM_VERSION="11.0"
 	if [ -z "$TW_DEFAULT_LANGUAGE" ]; then
 		unset TW_DEFAULT_LANGUAGE
-		export TW_DEFAULT_LANGUAGE="RU"
-		export FOX_BUILD_DEVICE="umi"
+		export TW_DEFAULT_LANGUAGE=RU
+		export FOX_BUILD_DEVICE=umi
 	fi
-export OF_KEEP_FORCED_ENCRYPTION=1
+export OF_KEEP_FORCED_ENCRYPTION=0
 export OF_SCREEN_H=2340
 export OF_STATUS_H=80
 export OF_STATUS_INDENT_LEFT=20
