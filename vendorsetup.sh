@@ -37,9 +37,9 @@ if [ -f $FOX_MANIFEST_ROOT/bootable/recovery/orangefox_defaults.go -a -f $FOX_MA
 		#export OF_USE_LZ4_COMPRESSION=1
 		export FOX_USE_ZIP_BINARY=0
 		export FOX_USE_TAR_BINARY=1
-		export FOX_USE_SED_BINARY=1
-		export FOX_USE_LZ4_BINARY=1
-		export FOX_USE_ZSTD_BINARY=1
+		export FOX_USE_SED_BINARY=0
+		export FOX_USE_LZ4_BINARY=0
+		export FOX_USE_ZSTD_BINARY=0
 		export FOX_USE_DATE_BINARY=0
 		export FOX_USE_GREP_BINARY=0
 		export FOX_USE_BUSYBOX_BINARY=1
@@ -99,7 +99,7 @@ if [ -f $FOX_MANIFEST_ROOT/bootable/recovery/orangefox_defaults.go -a -f $FOX_MA
 		export FOX_VARIANT=MIUI
 		export OF_FORCE_PREBUILT_KERNEL=1
 		export OF_SKIP_DECRYPTED_ADOPTED_STORAGE=0
-		export OF_ENABLE_LPTOOLS=0
+		#export OF_ENABLE_LPTOOLS=0
 		export OF_ENABLE_ALL_PARTITION_TOOLS=1
 		export FOX_PATCH_VBMETA_FLAG=0
 		export OF_FIX_DECRYPTION_ON_DATA_MEDIA=0
